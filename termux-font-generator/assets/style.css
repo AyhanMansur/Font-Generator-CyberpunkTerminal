@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+:root {
+    --terminal-green: #0f0;
+    --terminal-dim: #003300;
+    --bg-color: #050505;
+    --glow: 0 0 10px rgba(0, 255, 0, 0.7);
+}
+
+* {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    font-family: 'VT323', monospace;
+    color: var(--terminal-green);
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Matrix Background Canvas */
+#matrix-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    opacity: 0.3;
+}
+
+/* CRT Screen Overlay Effects */
+.crt-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+    background-size: 100% 2px, 3px 100%;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.screen-flicker {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 255, 0, 0.02);
+    opacity: 0;
+    z-index: 10;
+    pointer-events: none;
+    animation: flicker 0.15s infinite;
+}
+
+/* Main Terminal Container */
+.terminal-container {
+    position: relative;
+    z-index: 5;
+    width: 95%;
+    max-width: 800px;
+    height: 90vh;
+    background-color: rgba(0, 10, 0, 0.9);
+    border: 2px solid var(--terminal-green);
+    border-radius: 10px;
+    box-shadow: 0 0 20px var(--terminal-green), inset 0 0 20px var(--terminal-dim);
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    backdrop-filter: blur(5px);
+}
+
+/* Header */
+.terminal-header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--terminal-green);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    text-shadow: var(--glow);
+}
+
+.status-dot {
+    width: 10px;
+    height: 10px;
+    background-color: var(--terminal-green);
+    border-radius: 50%;
+    display: inline-block;
+    box-shadow: var(--glow);
+    animation: pulse 2s infinite;
+}
+
+/* Title with Glitch Effect */
+h1 {
+    font-size: 2.5rem;
+    margin: 10px 0;
+    position: relative;
+    text-shadow: 2px 2px 0px #ff00ff, -2px -2px 0px #00ffff;
+    animation: glitch 1s infinite alternate;
+}
+
+/* Input Area */
+.input-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.prompt {
+    font-size: 1.5rem;
+    padding-top: 5px;
+}
+
+input {
+    flex-grow: 1;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid var(--terminal-green);
+    color: var(--terminal-green);
+    font-family: 'VT323', monospace;
+    font-size: 1.5rem;
+    padding: 10px;
+    outline: none;
+    text-shadow: var(--glow);
+}
+
+input::placeholder {
+    color: rgba(0, 255, 0, 0.3);
+}
+
+/* Output Area */
+.output-screen {
+    flex-grow: 1;
+    background-color: rgba(0, 20, 0, 0.5);
+    border: 1px solid var(--terminal-dim);
+    padding: 15px;
+    overflow-y: auto;
+    font-size: 1.8rem;
+    line-height: 1.4;
+    color: #fff;
+    text-shadow: 0 0 5px var(--terminal-green);
+    position: relative;
+}
+
+/* Scrollbar Styling */
+.output-screen::-webkit-scrollbar {
+    width: 8px;
+}
+.output-screen::-webkit-scrollbar-track {
+    background: #001100;
+}
+.output-screen::-webkit-scrollbar-thumb {
+    background: var(--terminal-green);
+}
+
+/* Button */
+.hack-btn {
+    margin-top: 20px;
+    background: transparent;
+    border: 2px solid var(--terminal-green);
+    color: var(--terminal-green);
+    font-family: 'VT323', monospace;
+    font-size: 1.5rem;
+    padding: 10px 20px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all 0.2s;
+    position: relative;
+    overflow: hidden;
+}
+
+.hack-btn:hover {
+    background: var(--terminal-green);
+    color: #000;
+    box-shadow: var(--glow);
+}
+
+.hack-btn:active {
+    transform: scale(0.95);
+}
+
+/* Animations */
+@keyframes glitch {
+    0% { transform: translate(0) }
+    20% { transform: translate(-2px, 2px) }
+    40% { transform: translate(-2px, -2px) }
+    60% { transform: translate(2px, 2px) }
+    80% { transform: translate(2px, -2px) }
+    100% { transform: translate(0) }
+}
+
+@keyframes flicker {
+    0% { opacity: 0.02; }
+    5% { opacity: 0.05; }
+    10% { opacity: 0.02; }
+    15% { opacity: 0.06; }
+    100% { opacity: 0.02; }
+}
+
+@keyframes pulse {
+    0% { opacity: 0.5; }
+    50% { opacity: 1; }
+    100% { opacity: 0.5; }
+}
+
+/* Toast Notification */
+#toast {
+    visibility: hidden;
+    min-width: 250px;
+    background-color: #000;
+    color: var(--terminal-green);
+    border: 1px solid var(--terminal-green);
+    text-align: center;
+    padding: 15px;
+    position: fixed;
+    z-index: 20;
+    left: 50%;
+    bottom: 30px;
+    transform: translateX(-50%);
+    font-size: 1.2rem;
+    box-shadow: 0 0 15px var(--terminal-green);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+#toast.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    h1 { font-size: 1.8rem; }
+    .terminal-container { width: 100%; height: 100vh; border: none; border-radius: 0; }
+    input { font-size: 1.2rem; }
+    .output-screen { font-size: 1.4rem; }
+}

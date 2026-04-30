@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Cyberpunk Terminal Generator</title>
+    
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+    <!-- Background Effects -->
+    <canvas id="matrix-canvas"></canvas>
+    <div class="crt-overlay"></div>
+    <div class="screen-flicker"></div>
+
+    <!-- Main Terminal -->
+    <div class="terminal-container">
+        <div class="terminal-header">
+            <span>ROOT@TERMUX:~</span>
+            <div>
+                <span class="status-dot"></span> CONNECTED
+            </div>
+        </div>
+
+        <h1>FONT_INJECTOR.exe</h1>
+
+        <div class="input-group">
+            <span class="prompt">></span>
+            <input type="text" id="userInput" placeholder="ENTER TARGET TEXT..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+        </div>
+
+        <div class="output-screen" id="outputText" aria-live="polite">
+            <!-- Output appears here -->
+        </div>
+
+        <button class="hack-btn" id="copyBtn">EXECUTE_COPY()</button>
+    </div>
+
+    <div id="toast">SYSTEM: TEXT COPIED TO CLIPBOARD</div>
+
+    <!-- Link to external JavaScript -->
+    <script src="src/script.js"></script>
+</body>
+</html>
