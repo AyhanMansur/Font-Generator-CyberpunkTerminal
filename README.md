@@ -8,7 +8,7 @@
 > **Transform boring text into cool `𝕄𝕒𝕥𝕙𝕖𝕞𝕒𝕥𝕚𝕔𝕒𝕝 𝔻𝕠𝕦𝕓𝕝𝕖-𝕊𝕥𝕣𝕦𝕔𝕜` Unicode characters.**
 > 🚀 **Zero Dependencies** | 🎨 **Cyberpunk UI** | 📱 **Mobile Optimized**
 
-[✨ **Try Live Demo**](https://ayhanmansur.github.io/-/) | 📖 **Features** | 🛠️ **Installation** | 📜 **License**
+[✨ **Try Live Demo**](https://ayhanmansur.github.io/Font-Generator-CyberpunkTerminal/) | 📖 **Features** | 🛠️ **Installation** | 📜 **License**
 
 </div>
 
