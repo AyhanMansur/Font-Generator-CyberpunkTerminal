@@ -18,7 +18,7 @@
 
 <div align="center">
 
-![Terminal Interface]<img src="https://raw.githubusercontent.com/AyhanMansur/Font-Generator-CyberpunkTerminal/refs/heads/main/termux-font-generator/assets/Screenshot%202026-04-30%20053620.png" />
+![Terminal Interface](https://raw.githubusercontent.com/AyhanMansur/Font-Generator-CyberpunkTerminal/refs/heads/main/termux-font-generator/assets/Screenshot%202026-04-30%20053620.png)
 *The Cyberpunk Terminal Interface in Action*
 
 </div>
