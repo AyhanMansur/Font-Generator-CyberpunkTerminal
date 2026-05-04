@@ -74,17 +74,6 @@ No installation required! This is a static site.
 2.  Open `index.html` in your browser.
 3.  Start hacking! 🖥️
 
-### Option 2: Deploy to GitHub Pages (Recommended)
-1.  Go to your repo **Settings** > **Pages**.
-2.  Select `main` branch and `/root` folder.
-3.  Click **Save**.
-4.  Visit your new site: `https://yourusername.github.io/termux-font-generator`.
-
-### Option 3: Deploy to Netlify/Vercel
-1.  Connect your GitHub repo to Netlify/Vercel.
-2.  The build command is `none` (it's static).
-3.  Deploy!
-
 ---
 
 ## 🛠️ Tech Stack
