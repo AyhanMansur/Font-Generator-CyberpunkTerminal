@@ -69,7 +69,7 @@ No installation required! This is a static site.
 ### Option 1: Run Locally (Desktop)
 1.  Clone the repo:
     ```bash
-    git clone https://github.com/yourusername/termux-font-generator.git
+    https://github.com/AyhanMansur/Font-Generator-CyberpunkTerminal.git
     ```
 2.  Open `index.html` in your browser.
 3.  Start hacking! 🖥️
