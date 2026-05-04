@@ -120,3 +120,4 @@ termux-font-generator/
 └── assets/
     ├── preview.gif     # GIF showing the tool in action
     └── matrix-bg.gif   # GIF of the background animation
+@ 𝓐𝔂𝓱𝓪𝓷 𝓜𝓪𝓷𝓼𝓾𝓻 🌿
