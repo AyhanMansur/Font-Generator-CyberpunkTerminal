@@ -1,4 +1,4 @@
-# 🟢 Termux Style Font Generator | Cyberpunk Terminal
+# 🟢 Hacker Style Font Generator | Cyberpunk Terminal
 
 <div align="center">
 
