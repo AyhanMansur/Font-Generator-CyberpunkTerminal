@@ -3,7 +3,7 @@
 <div align="center">
 
 ![GitHub stars](https://img.shields.io/github/stars/yourusername/termux-font-generator?style=social)
-![GitHub forks](https://img.shields.io/github/forks/yourusername/termux-font-generator?style=social)
+![GitHub forks](https://img.shields.io/github/forks/AyhanMansur/AyhanMansur/-?style=social)
 ![GitHub issues](https://img.shields.io/github/issues/yourusername/termux-font-generator)
 ![License](https://img.shields.io/github/license/yourusername/termux-font-generator)
 ![Last Commit](https://img.shields.io/github/last-commit/yourusername/termux-font-generator)
