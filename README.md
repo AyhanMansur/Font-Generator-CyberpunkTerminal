@@ -2,11 +2,8 @@
 
 <div align="center">
 
-![GitHub stars](https://img.shields.io/github/stars/yourusername/termux-font-generator?style=social)
-![GitHub forks](https://img.shields.io/github/forks/AyhanMansur/AyhanMansur/-?style=social)
-![GitHub issues](https://img.shields.io/github/issues/yourusername/termux-font-generator)
-![License](https://img.shields.io/github/license/yourusername/termux-font-generator)
-![Last Commit](https://img.shields.io/github/last-commit/yourusername/termux-font-generator)
+[![Status](https://img.shields.io/badge/Status-Active-brightgreen)](https://github.com/AyhanMansur/dowinb)
+[![Platform](https://img.shields.io/badge/Platform-chrome%20%7C%20firefox%20%7C%20safari-blue)](https://github.com/AyhanMansur/dowinb)
 
 > **Transform boring text into cool `𝕄𝕒𝕥𝕙𝕖𝕞𝕒𝕥𝕚𝕔𝕒𝕝 𝔻𝕠𝕦𝕓𝕝𝕖-𝕊𝕥𝕣𝕦𝕔𝕜` Unicode characters.**
 > 🚀 **Zero Dependencies** | 🎨 **Cyberpunk UI** | 📱 **Mobile Optimized**
